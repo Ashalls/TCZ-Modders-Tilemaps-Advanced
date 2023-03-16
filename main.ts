@@ -3,7 +3,9 @@
 //% groups="['Local Tiles', 'Game Population']"
 
 namespace tilesAdvanced {
-
+    /**
+     * Returns a list of tiles in a plus sign within a tile in a given range
+     */
     //% blockId=getAdjacentTiles
     //% block="get tiles near to $tile within $distance"
     //% group="Local Tiles"
