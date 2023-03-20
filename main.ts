@@ -39,7 +39,7 @@ namespace tilesAdvanced {
     //% group="Tile Comparisons"
     //% weight=20
     export function tileIsTile(tile: tiles.Location, otherTile: tiles.Location): boolean{
-        if (tile.col == otherTile.row && tile.row == otherTile.row){
+        if (tile.col == otherTile.col && tile.row == otherTile.row){
             return true
         }
         return false
