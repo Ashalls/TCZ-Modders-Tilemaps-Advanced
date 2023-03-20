@@ -32,6 +32,20 @@ namespace tilesAdvanced {
     }
 
     /**
+     * Returns true if the given tiles are the same tile
+     */
+    //% blockId=tileIsTile
+    //% block="$tile is $otherTile"
+    //% group="Tile Comparisons"
+    //% weight=20
+    export function tileIsTile(tile: tiles.Location, otherTile: tiles.Location): boolean{
+        if (tile.col == otherTile.row && tile.row == otherTile.row){
+            return true
+        }
+        return false
+    }
+
+    /**
      * Returns true if the given tile is in the list of tiles provided
      */
     //% blockId=tileIsInList
@@ -40,7 +54,7 @@ namespace tilesAdvanced {
     //% weight=20
     export function tileIsInList(tile: tiles.Location, tileList: tiles.Location[]): boolean{
         for (let tileInList of tileList){
-            if (tile.col == tileInList.col && tile.row == tileInList.row){
+            if (tileIsTile(tile, tileInList)){
                 return true
             }
         }
