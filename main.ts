@@ -1,6 +1,7 @@
 //% weight=0 color=#13a89e icon="\uf041" block="Tiles Advanced"
 //% advanced=false
-//% groups="['Local Tiles', 'Game Population', 'Tile Comparisons]"
+//% groups="['Local Tiles', 'Tilemap Population', 'Tile Comparisons]"
+
 
 namespace tilesAdvanced {
     /**
@@ -59,5 +60,18 @@ namespace tilesAdvanced {
             }
         }
         return false
+    }
+
+    /**
+     * Sets the wall on or off for all tiles of a given type
+     */
+    //% blockId=setWallOnTilesOfType
+    //% block="set walls $makeWall on tiles of type $tile"
+    //% group="Tilemap Population"
+    //% weight=20
+    export function setWallOnTilesOfType(tile: Image, makeWall: boolean){
+        for (let tileOfType of tiles.getTilesByType(tile)){
+            tiles.setWallAt(tileOfType, makeWall)
+        }
     }
 }
