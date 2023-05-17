@@ -1,6 +1,6 @@
 //% weight=0 color=#13a89e icon="\uf041" block="Tiles Advanced"
 //% advanced=false
-//% groups="['Local Tiles', 'Tilemap Population', 'Tile Comparisons', 'Tile Animation']"
+//% groups="['Local Tiles', 'Tilemap Population', 'Tile Comparisons', 'Tile Animation', 'Pathfinding']"
 
 namespace tilesAdvanced {
     /**
@@ -96,5 +96,24 @@ namespace tilesAdvanced {
         })
     }
 
+    /**
+     * Makes this sprite follow the target sprite using pathfinding
+     */
+    //% blockId=followUsingPathfinding
+    //% block="set %sprite(myEnemy) follow %target=variables_get(mySprite) || with speed %speed"
+    //% group="Pathfinding"
+    //% weight=20
+    export function followUsingPathfinding(sprite: Sprite, target: Sprite, speed = 100){
+        let myStart = sprite.tilemapLocation();
+        let path = scene.aStar(myStart, target.tilemapLocation())
+        scene.followPath(sprite, path, speed)
+        game.onUpdate(function tick(){
+            if (!tileIsTile(sprite.tilemapLocation(), myStart)){
+                myStart = sprite.tilemapLocation();
+                path = scene.aStar(myStart, target.tilemapLocation())
+                scene.followPath(sprite, path, speed)
+            }
+        })
+    }
 }
 

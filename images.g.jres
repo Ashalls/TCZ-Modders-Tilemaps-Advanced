@@ -1,4 +1,14 @@
 {
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACICAAAAAAAgIiICAAAAACACIiIAAAAAICIiIgAAAAAAIiIiAAAAAAAiIiIAAAAAAAIgIAAAAAAAAiAgAAAAAAAiAgIAAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "enemy"
+    },
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAHAAAAAABwd3cHAAAAAAcHd3cAAAAAB3d3dwcAAAB3d3B3BwAAAHB3d3cHAAAAcHd3cAcAAAAAB3B3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "player"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

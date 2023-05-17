@@ -1,22 +1,9 @@
-tiles.setCurrentTilemap(tilemap`level`)
-tilesAdvanced.animateTileOfTypeWith(assets.tile`water`, assets.animation`anim`, 200)
+tiles.setCurrentTilemap(tilemap`map`);
 
-let mySprite2 = sprites.create(img`
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . 3 3 . . . . . . .
-    . . . . . . . 3 3 3 . . . . . .
-    . . . . . . . 3 3 . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . .
-`, SpriteKind.Player)
-controller.moveSprite(mySprite2)
+let mySprite = sprites.create(assets.image`player`, SpriteKind.Player);
+controller.moveSprite(mySprite);
+scene.cameraFollowSprite(mySprite)
+
+let myEnemy = sprites.create(assets.image`enemy`, SpriteKind.Enemy);
+tiles.placeOnRandomTile(myEnemy, assets.tile`ground`)
+tilesAdvanced.followUsingPathfinding(myEnemy, mySprite, 50)

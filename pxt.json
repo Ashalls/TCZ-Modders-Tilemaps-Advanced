@@ -4,7 +4,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "controller": "*"
+        "controller": "*",
+        "arcade-tilemap-a-star": "github:jwunderl/arcade-tilemap-a-star#v0.4.0"
     },
     "files": [
         "main.blocks",
@@ -20,7 +21,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.26",
+        "target": "1.12.30",
         "pxt": "8.5.2",
         "targetId": "arcade"
     },
