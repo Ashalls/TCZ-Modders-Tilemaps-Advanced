@@ -11,10 +11,6 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "images.g.jres",
-        "images.g.ts",
-        "tilemap.g.jres",
-        "tilemap.g.ts",
         "tilesadvanced.ts"
     ],
     "testFiles": [
